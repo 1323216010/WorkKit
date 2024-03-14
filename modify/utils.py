@@ -1,8 +1,5 @@
 import os
-import json
 import pandas as pd
-from pathlib import Path
-import shutil
 import subprocess
 
 
@@ -60,23 +57,3 @@ def copy_files1(path, destination_folder):
         subprocess.run(f'copy "{path}" "{dest_path}"', shell=True)
     except Exception as e:
         print(f"Error occurred while copying {path}: {e}")
-
-
-def copy_files(json_file, destination_folder):
-    destination_folder = Path(destination_folder)
-    if not destination_folder.exists():
-        destination_folder.mkdir(parents=True)
-
-    with open(json_file, 'r', encoding='utf-8') as file:
-        file_paths = json.load(file)
-
-    for file_path in file_paths:
-        source_path = Path(file_path)
-        if source_path.is_file():
-            dest_path = destination_folder / source_path.name
-            try:
-                shutil.copy(source_path, dest_path)
-            except Exception as e:
-                print(f"Failed to copy {source_path} to {dest_path}: {e}")
-        else:
-            print(f"File not found or is not a file: {source_path}")

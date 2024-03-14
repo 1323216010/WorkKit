@@ -1,0 +1,15 @@
+[
+  {
+    "updates": [
+      {
+        "section": "FDR",
+        "key": "IsNeedFDR",
+        "value": "1"
+      }
+    ],
+    "paths": [
+      "C:\\Users\\pengcheng.yan\\Desktop\\test\\para1\\Elephant_Config.ini",
+      "C:\\Users\\pengcheng.yan\\Desktop\\test\\para2\\Elephant_Config.ini"
+    ]
+  }
+]

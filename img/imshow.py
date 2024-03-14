@@ -1,10 +1,11 @@
+import json
 import cv2
 import numpy as np
 from tkinter import filedialog
 from tkinter import Tk
 
 
-def read_raw(filename, bits_num, rows, cols):
+def read_raw(filename, bits_num, width, height):
     with open(filename, 'rb') as file:
         if bits_num == 8:
             dtype = np.uint8
@@ -14,20 +15,20 @@ def read_raw(filename, bits_num, rows, cols):
             raise ValueError("Unsupported bit depth")
 
         raw_data = np.fromfile(file, dtype=dtype)
-        if len(raw_data) != rows * cols:
+        if len(raw_data) != width * height:
             raise ValueError("File size does not match specified dimensions")
-        raw_data = np.reshape(raw_data, (rows, cols))
+        raw_data = np.reshape(raw_data, (width, height))
     return raw_data
 
 
-def demosaic_RGGB_to_RGB(raw_data):
-    # Assuming raw_data is of 'RGGB' Bayer pattern
-    # Convert raw_data to a 3-channel BGR image using demosaicing
-    color_image = cv2.cvtColor(raw_data, cv2.COLOR_BayerBG2BGR)
-    return color_image
-
-
 def main():
+    with open('config.json', 'r', encoding='utf-8') as file:
+        config = json.load(file)
+
+    bits_num = config['bits_num']
+    width = config['width']
+    height = config['height']
+
     root = Tk()
     root.withdraw()  # Hide the main window
     file_path = filedialog.askopenfilename(filetypes=[("Raw files", "*.raw")])
@@ -35,14 +36,10 @@ def main():
         print("No file selected")
         return
 
-    bits_num = 8  # or 10, 12, 16 depending on your file
-    rows = 4208
-    cols = 3120
-    raw_data = read_raw(file_path, bits_num, rows, cols)
-    color_image = demosaic_RGGB_to_RGB(raw_data)
+    raw_data = read_raw(file_path, bits_num, width, height)
 
-    # Show the color image
-    cv2.imshow('Demosaiced', color_image)
+    # Show the image
+    cv2.imshow('Original', raw_data)
     cv2.waitKey(0)
     cv2.destroyAllWindows()
 
