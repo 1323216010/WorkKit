@@ -193,3 +193,12 @@ def get_value_from_csv(x, y, csv_path):
     value = df.iloc[y - 1, x - 1]  # 如果x和y是基于1的索引，减1进行调整
     return value
 
+
+def summary_bank():
+    list1 = []
+
+    bank = [f'#Bank{i}' for i in range(1024)]
+
+    list1 = list1 + bank
+    return list1
+

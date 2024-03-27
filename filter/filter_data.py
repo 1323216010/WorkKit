@@ -43,12 +43,12 @@ def delete(folder_path, issue_df):
 
 
 if __name__ == '__main__':
-    issue_df = read_csv(r'C:\Users\pengcheng.yan\Desktop\test_log\500pcs.csv')
+    issue_df = read_csv(r'C:\Users\pengcheng.yan\Desktop\barcode_list.csv')
 
     folder_paths = [
-        r'C:\Users\pengcheng.yan\Desktop\test_log1'
+        r'C:\Users\pengcheng.yan\Desktop\summary log\Module OQC'
     ]
     matching_df = retain(folder_paths, issue_df)
     matching_df.fillna('', inplace=True)  # 用空字符串填充NaN
-    matching_df.to_csv(r'C:\Users\pengcheng.yan\Desktop\test_log\500pcs_por.csv', index=False)
+    matching_df.to_csv(r'C:\Users\pengcheng.yan\Desktop\summary log\summary log.csv', index=False)
 

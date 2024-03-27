@@ -1,0 +1,76 @@
+[
+  {
+    "type": "Module OQC APS",
+    "excluded_folder": [
+      "FTU",
+      "FTD",
+      "ListLog",
+      "GRR",
+      "PDX-R 97",
+      "外观",
+      "不良",
+      "先行品",
+      "Debug",
+      "Raw",
+      "LCD",
+      "FLARE",
+      "PNG"
+    ],
+    "excluded_file": [
+      "LimitLog"
+    ],
+    "included_file": [
+      "PDX_OQC_Tester"
+    ]
+  },
+  {
+    "type": "Cube OQC APS",
+    "excluded_folder": [
+      "FTU",
+      "FTD",
+      "ListLog",
+      "GRR",
+      "PDX-R 97",
+      "外观",
+      "不良",
+      "先行品",
+      "Debug",
+      "Raw",
+      "MFG",
+      "LCD",
+      "FLARE",
+      "PNG"
+    ],
+    "excluded_file": [
+      "LimitLog"
+    ],
+    "included_file": [
+      "PDX_OQC_Tester"
+    ]
+  },
+  {
+    "type": "Cube MFG APS",
+    "excluded_folder": [
+      "FTU",
+      "FTD",
+      "ListLog",
+      "GRR",
+      "PDX-R 97",
+      "外观",
+      "不良",
+      "先行品",
+      "Debug",
+      "Raw",
+      "OQC",
+      "LCD",
+      "FLARE",
+      "PNG"
+    ],
+    "excluded_file": [
+      "LimitLog"
+    ],
+    "included_file": [
+      "PDX_MFG_Tester"
+    ]
+  }
+]

@@ -24,3 +24,23 @@ def read_csv(path):
     col_names = pd.read_csv(path, nrows=1).columns
     df = pd.read_csv(path, usecols=col_names, low_memory=False, encoding="UTF-8", delimiter=',')
     return df
+
+
+def remove_columns(merged_df):
+    columns_to_remove = []  # 存储需要删除的列名
+    for col in merged_df.columns:
+        if col.endswith('_x'):
+            original_col_name = col[:-2]  # 去除_x后缀获取原始列名
+            col_y = original_col_name + '_y'
+
+            # 如果存在对应的_y列，可以选择删除_y列
+            if col_y in merged_df.columns:
+                columns_to_remove.append(col_y)
+
+            # 重命名_x列为原始列名
+            merged_df.rename(columns={col: original_col_name}, inplace=True)
+
+    # 删除所有标记为删除的列
+    merged_df.drop(columns=columns_to_remove, inplace=True)
+
+    return merged_df

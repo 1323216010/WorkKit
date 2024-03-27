@@ -80,3 +80,48 @@ def copy_files(json_file, destination_folder):
                 print(f"Failed to copy {source_path} to {dest_path}: {e}")
         else:
             print(f"File not found or is not a file: {source_path}")
+
+
+def copy_files_with_json(json_file, destination_folder):
+    # 确保目标文件夹存在
+    if not os.path.exists(destination_folder):
+        os.makedirs(destination_folder)
+
+    # 读取JSON文件中的路径列表
+    with open(json_file, 'r', encoding='utf-8') as file:
+        file_paths = json.load(file)
+
+    # 遍历列表中的每个文件路径
+    for path in file_paths:
+        # 构建目标文件路径
+        file_name = os.path.basename(path)
+        dest_path = os.path.join(destination_folder, file_name)
+
+        try:
+            subprocess.run(f'copy "{path}" "{dest_path}"', shell=True)
+        except Exception as e:
+            print(f"Error occurred while copying {path}: {e}")
+
+def read_csv(path):
+    col_names = pd.read_csv(path, nrows=1).columns
+    df = pd.read_csv(path, usecols=col_names, low_memory=False, encoding="UTF-8", delimiter=',')
+    return df
+
+
+def find_files_plus(paths, excluded_dirs, excluded_files, included_files):
+    target_files = []
+    for path in paths:
+        # 遍历指定路径及其所有子目录
+        for root, dirs, files in os.walk(path):
+            # 在这里修改dirs列表，防止进一步遍历不需要的子目录
+            dirs[:] = [d for d in dirs if all(sub not in d for sub in excluded_dirs)]
+
+            # 过滤出不包含在excluded_files中的文件
+            files = [f for f in files if all(sub not in f for sub in excluded_files)]
+            # 过滤出包含在included_files中的文件
+            files = [f for f in files if all(sub in f for sub in included_files)]
+
+            for file in files:
+                target_files.append(os.path.join(root, file))
+
+    return target_files

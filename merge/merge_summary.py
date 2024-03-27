@@ -1,9 +1,9 @@
 import pandas as pd
 import os
-from utils import summary_cal, read_csv1, read_csv
+from utils import read_csv
 
 
-folder_path = r'C:\Users\pengcheng.yan\Desktop\log\por'
+folder_path = r'C:\Users\pengcheng.yan\Desktop\summary log\Module OQC'
 
 all_df = pd.DataFrame()
 for filename in os.listdir(folder_path):

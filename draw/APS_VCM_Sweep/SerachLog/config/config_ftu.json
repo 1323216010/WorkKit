@@ -1,0 +1,80 @@
+[
+  {
+    "type": "Module OQC FTU",
+    "excluded_folder": [
+      "APS",
+      "FTD",
+      "ListLog",
+      "GRR",
+      "PDX-R 97",
+      "外观",
+      "不良",
+      "先行品",
+      "Debug",
+      "Raw",
+      "LCD",
+      "FLARE",
+      "PNG"
+    ],
+    "excluded_file": [
+      "LimitLog"
+    ],
+    "included_file": [
+      "VCM",
+      "FTU"
+    ]
+  },
+  {
+    "type": "Cube OQC FTU",
+    "excluded_folder": [
+      "APS",
+      "FTD",
+      "ListLog",
+      "GRR",
+      "PDX-R 97",
+      "外观",
+      "不良",
+      "先行品",
+      "Debug",
+      "Raw",
+      "MFG",
+      "LCD",
+      "FLARE",
+      "PNG"
+    ],
+    "excluded_file": [
+      "LimitLog"
+    ],
+    "included_file": [
+      "OQC",
+      "VCM",
+      "FTU"
+    ]
+  },
+  {
+    "type": "Cube MFG FTU",
+    "excluded_folder": [
+      "APS",
+      "FTD",
+      "ListLog",
+      "GRR",
+      "PDX-R 97",
+      "外观",
+      "不良",
+      "先行品",
+      "Debug",
+      "Raw",
+      "OQC",
+      "LCD",
+      "FLARE",
+      "PNG"
+    ],
+    "excluded_file": [
+      "LimitLog"
+    ],
+    "included_file": [
+      "VCM",
+      "FTU"
+    ]
+  }
+]

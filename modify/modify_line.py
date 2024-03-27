@@ -2,8 +2,8 @@ import os
 import pandas as pd
 
 
-folder_path = r'C:\Users\pengcheng.yan\Desktop\PD40116-LGD020\POR'
-output_path = r'C:\Users\pengcheng.yan\Desktop\PD40116-LGD020\DOE'
+folder_path = r'C:\Users\pengcheng.yan\Desktop\test_aps\[DOE]C3054 rawlog\[DOE]Shakulog'
+output_path = r'C:\Users\pengcheng.yan\Desktop\test_aps\test'
 
 if not os.path.exists(output_path):
     os.makedirs(output_path)

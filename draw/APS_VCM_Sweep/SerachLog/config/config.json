@@ -1,0 +1,212 @@
+{
+  "linewidth": "0.2",
+  "s": "5",
+  "pictures": [
+    {
+      "title": "APS Reading",
+      "xlabel": "Current(mA)",
+      "ylabel": "APS-Reading",
+      "x_min": "-150",
+      "x_max": "150",
+      "y_min": "-1500",
+      "y_max": "1500",
+      "items": [
+        {
+          "tag": "Cube-MFG-APS-E",
+          "path": "/APS/Cube MFG APS",
+          "x": "AF_Coil_Current",
+          "y": "Read_APS_E"
+        },
+        {
+          "tag": "Cube-MFG-APS-W",
+          "path": "/APS/Cube MFG APS",
+          "x": "AF_Coil_Current",
+          "y": "Read_APS_W"
+        },
+        {
+          "tag": "Cube-OQC-APS-E",
+          "path": "/APS/Cube OQC APS",
+          "x": "AF_Coil_Current",
+          "y": "Read_APS_E_AVG"
+        },
+        {
+          "tag": "Cube-OQC-APS-W",
+          "path": "/APS/Cube OQC APS",
+          "x": "AF_Coil_Current",
+          "y": "Read_APS_W_AVG"
+        },
+        {
+          "tag": "Module-OQC-APS-E",
+          "path": "/APS/Module OQC APS",
+          "x": "AF_Coil_Current",
+          "y": "Read_APS_E_AVG"
+        },
+        {
+          "tag": "Module-OQC-APS-W",
+          "path": "/APS/Module OQC APS",
+          "x": "AF_Coil_Current",
+          "y": "Read_APS_W_AVG"
+        }
+      ]
+    },
+    {
+      "title": "APS & Module OQC FTU APS Reading",
+      "xlabel": "Current(mA)",
+      "ylabel": "APS-Reading",
+      "x_min": "-150",
+      "x_max": "150",
+      "y_min": "-1500",
+      "y_max": "1500",
+      "items": [
+        {
+          "tag": "Cube-MFG-APS-E",
+          "path": "/APS/Cube MFG APS",
+          "x": "AF_Coil_Current",
+          "y": "Read_APS_E"
+        },
+        {
+          "tag": "Cube-MFG-APS-W",
+          "path": "/APS/Cube MFG APS",
+          "x": "AF_Coil_Current",
+          "y": "Read_APS_W"
+        },
+        {
+          "tag": "Cube-OQC-APS-E",
+          "path": "/APS/Cube OQC APS",
+          "x": "AF_Coil_Current",
+          "y": "Read_APS_E_AVG"
+        },
+        {
+          "tag": "Cube-OQC-APS-W",
+          "path": "/APS/Cube OQC APS",
+          "x": "AF_Coil_Current",
+          "y": "Read_APS_W_AVG"
+        },
+        {
+          "tag": "Module-OQC-APS-E",
+          "path": "/APS/Module OQC APS",
+          "x": "AF_Coil_Current",
+          "y": "Read_APS_E_AVG"
+        },
+        {
+          "tag": "Module-OQC-APS-W",
+          "path": "/APS/Module OQC APS",
+          "x": "AF_Coil_Current",
+          "y": "Read_APS_W_AVG"
+        },
+        {
+          "tag": "Module-OQC-FTU-E",
+          "path": "/FTU/Module OQC FTU",
+          "x": "#vcmUpCurrent",
+          "y": "#vcmUpAPSE"
+        },
+        {
+          "tag": "Module-OQC-FTU-W",
+          "path": "/FTU/Module OQC FTU",
+          "x": "#vcmUpCurrent",
+          "y": "#vcmUpAPSW"
+        }
+      ]
+    },
+    {
+      "title": "APS Laser Reading",
+      "xlabel": "Current(mA)",
+      "ylabel": "Laser-Reading",
+      "x_min": "-150",
+      "x_max": "150",
+      "y_min": "-50",
+      "y_max": "450",
+      "items": [
+        {
+          "tag": "Cube-MFG-APS-Laser1",
+          "path": "/APS/Cube MFG APS",
+          "x": "AF_Coil_Current",
+          "y": "Laser_Displacement1"
+        },
+        {
+          "tag": "Cube-MFG-APS-Laser2",
+          "path": "/APS/Cube MFG APS",
+          "x": "AF_Coil_Current",
+          "y": "Laser_Displacement2"
+        },
+        {
+          "tag": "Cube-OQC-APS-Laser1",
+          "path": "/APS/Cube OQC APS",
+          "x": "AF_Coil_Current",
+          "y": "Laser_Displacement1"
+        },
+        {
+          "tag": "Cube-OQC-APS-Laser2",
+          "path": "/APS/Cube OQC APS",
+          "x": "AF_Coil_Current",
+          "y": "Laser_Displacement2"
+        },
+        {
+          "tag": "Module-OQC-APS-Laser1",
+          "path": "/APS/Module OQC APS",
+          "x": "AF_Coil_Current",
+          "y": "Laser_Displacement1"
+        },
+        {
+          "tag": "Module-OQC-APS-Laser2",
+          "path": "/APS/Module OQC APS",
+          "x": "AF_Coil_Current",
+          "y": "Laser_Displacement2"
+        }
+      ]
+    },
+    {
+      "title": "APS & Module OQC FTU Laser Reading",
+      "xlabel": "Current(mA)",
+      "ylabel": "Laser-Reading",
+      "x_min": "-150",
+      "x_max": "150",
+      "y_min": "-50",
+      "y_max": "450",
+      "items": [
+        {
+          "tag": "Cube-MFG-APS-Laser1",
+          "path": "/APS/Cube MFG APS",
+          "x": "AF_Coil_Current",
+          "y": "Laser_Displacement1"
+        },
+        {
+          "tag": "Cube-MFG-APS-Laser2",
+          "path": "/APS/Cube MFG APS",
+          "x": "AF_Coil_Current",
+          "y": "Laser_Displacement2"
+        },
+        {
+          "tag": "Cube-OQC-APS-Laser1",
+          "path": "/APS/Cube OQC APS",
+          "x": "AF_Coil_Current",
+          "y": "Laser_Displacement1"
+        },
+        {
+          "tag": "Cube-OQC-APS-Laser2",
+          "path": "/APS/Cube OQC APS",
+          "x": "AF_Coil_Current",
+          "y": "Laser_Displacement2"
+        },
+        {
+          "tag": "Module-OQC-APS-Laser1",
+          "path": "/APS/Module OQC APS",
+          "x": "AF_Coil_Current",
+          "y": "Laser_Displacement1"
+        },
+        {
+          "tag": "Module-OQC-APS-Laser2",
+          "path": "/APS/Module OQC APS",
+          "x": "AF_Coil_Current",
+          "y": "Laser_Displacement2"
+        },
+        {
+          "tag": "Module-OQC-FTU",
+          "path": "/FTU/Module OQC FTU",
+          "x": "#vcmUpCurrent",
+          "y": "#vcmUpDisplacement"
+        }
+      ]
+    }
+  ]
+}

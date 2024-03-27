@@ -1,5 +1,6 @@
 import pandas as pd
 
+
 def merge_csvs(csv_with_col_names, csv_without_col_names, output_file):
     # 读取第一个CSV文件，其中包含列名
     df1 = pd.read_csv(csv_with_col_names)
